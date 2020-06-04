@@ -1,0 +1,1608 @@
+*
+    box-sizing: border-box
+    -webkit-overflow-scrolling: touch
+
+ul, li
+    margin: 0
+    padding: 0
+
+h1, h2, h3, h4, p
+    margin: 0
+
+a
+    color: #383838
+    text-decoration: none
+
+textarea,
+input
+    outline: none
+    border: none
+    border-radius: 0
+    color: #818c92
+    box-shadow: none
+    -webkit-appearance: none
+    &::-webkit-input-placeholder
+        color: #818c92
+ 
+button
+    outline: none
+    border: none
+    cursor: pointer
+
+ul
+    list-style-type: none
+
+body
+    width: 100%
+    min-width: 320px
+    background: #191b1c
+    font-family: 'Ubuntu', sans-serif
+    font-size: 0
+    color: #818c92
+    font-weight: 400
+    margin: 0
+    padding: 0
+    -webkit-text-size-adjust: none
+
+.wrapper
+    width: 100%
+    height: 100%
+    max-width: 1200px
+    position: relative
+    padding: 0 15px
+    margin: 0 auto
+    &-l_header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-top: 32px
+        &:before
+            content: ""
+            width: 200%
+            height: 100%
+            background: #0a0b0b
+            position: absolute
+            right: -200%
+            top: 0
+    &-l_footer
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+.l_header
+    width: 100%
+    height: 113px
+    background: #1f2224
+    z-index: 2
+    position: fixed
+    left: 0
+    top: 0
+    transition: background .3s ease-out
+    &.transparent
+        background: transparent
+    &__right
+        width: 620px
+        max-width: 100%
+        display: flex
+        justify-content: flex-start
+    &__menu
+        width: 150px
+        height: 100%
+        display: flex
+        justify-content: flex-end
+        align-items: flex-end
+        background: #0a0b0b
+        position: absolute
+        right: 0
+        top: 0
+        padding: 0 15px 32px 0
+        &:before
+            content: ""
+            width: 0
+            height: 0
+            border-top: 113px solid #0a0b0b
+            border-left: 110px solid transparent
+            position: absolute
+            left: -110px
+            top: 0
+    &__lines
+        width: 25px
+        height: 14px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-end
+        cursor: pointer
+        &:hover
+            div
+                &:nth-child(2)
+                    width: 100%
+        div
+            width: 100%
+            height: 2px
+            background: #00c22e
+            transition: width .3s ease-out
+            &:nth-child(2)
+                width: 64%
+
+.l_logo
+    img
+        width: 140px
+
+.l_currency
+    display: flex
+    align-items: center
+    cursor: pointer
+    position: relative
+    &:hover
+        .l_currency
+            &__drop
+                transform: scale(1)
+    &__text
+        font-size: 16px
+    &__symbol
+        min-width: 16px
+        font-size: 20px
+        color: #039b27
+        text-align: center
+        position: relative
+        margin: 0 0 0 26px
+        &:before
+            content: ""
+            width: 100%
+            height: 2px
+            background: #00c22e
+            position: absolute
+            left: 0
+            bottom: -5px
+    &__title
+        font-size: 20px
+        color: #fff
+        text-transform: uppercase
+        margin: 0 0 0 16px
+    &__drop
+        width: 150px
+        position: absolute
+        left: 40px
+        top: 28px
+        padding: 20px 0 0
+        transform: scale(0)
+        transform-origin: top
+        transition: transform .3s ease-out
+    &__content
+        background: #1f2224
+        box-shadow: 19px 33px 81px rgba(0, 0, 0, .66)
+        padding: 28px 0
+    &__row
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 11px 20px
+        transition: background .3s ease-out
+        &:hover,
+        &.active
+            background: #191b1d
+        .l_currency__symbol
+            margin: 0
+    &__choose
+        align-items: center
+        display: none
+        &.active
+            display: flex
+
+.l_lang
+    cursor: pointer
+    position: relative
+    margin: 0 0 0 74px
+    &:hover
+        .l_lang
+            &__drop
+                transform: scale(1)
+    &__el
+        display: flex
+        align-items: center
+    &__flag
+        width: 28px
+        height: 28px
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        border-radius: 100%
+    &__text
+        font-size: 16px
+        color: #fff
+        margin: 0 0 0 15px
+    &__arrow
+        width: 7px
+        height: 13px
+        background: url(../img/l_nav.png) center no-repeat
+        background-size: contain
+        margin: 5px 0 0 24px
+        transform: rotate(-90deg)
+    &__drop
+        width: 218px
+        position: absolute
+        left: -38px
+        top: 28px
+        padding: 20px 0 0
+        transform: scale(0)
+        transform-origin: top
+        transition: transform .3s ease-out
+    &__content
+        background: #1f2224
+        box-shadow: 19px 33px 81px rgba(0, 0, 0, .66)
+        padding: 28px 0
+    &__row
+        display: flex
+        align-items: center
+        padding: 11px 40px
+        transition: background .3s ease-out
+        &:hover,
+        &.active
+            background: #191b1d
+    &__choose
+        align-items: center
+        display: none
+        &.active
+            display: flex
+
+.l_order
+    min-height: calc(100vh - 125px)
+    background: url(../img/l_order.png) center bottom no-repeat #191b1c
+    background-size: cover
+    overflow: hidden
+    position: relative
+    &:before
+        content: ""
+        width: 449px
+        height: 1067px
+        background: url(../img/l_order-alpha.png) center no-repeat
+        background-size: contain
+        position: absolute
+        left: 0
+        top: 0
+
+.l_content
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+.l_card
+    display: flex
+    justify-content: space-between
+    padding: 194px 0 166px
+    &__left
+        width: calc(100% - 760px)
+    &__slider
+        position: relative
+        &:before
+            content: ""
+            width: 0
+            height: 0
+            border-radius: 100%
+            box-shadow: 0 0 150px 80px rgba(77, 90, 97, 0.59)
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            margin: auto
+    &__image_wrp
+        width: 100%
+        position: relative
+        margin: 0 0 80px
+    &__image
+        width: 100%
+        background-size: contain
+        background-position: center
+        background-repeat: no-repeat
+        position: relative
+    &__right
+        width: 620px
+    &__h1
+        font-size: 42px
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 4.6px
+        margin: 0 0 42px
+    &__white
+        color: #fff
+
+.l_gallery
+    display: flex
+    flex-wrap: wrap
+    &__img
+        width: calc((100% - 80px) / 5)
+        max-height: 77px
+        cursor: pointer
+        position: relative
+        margin: 0 20px 33px 0
+        img
+            width: 100%
+            transition: filter .3s ease-out
+        &:before
+            content: ""
+            width: 0
+            height: 3px
+            background: #00c22e
+            position: absolute
+            left: 0
+            bottom: -14px
+            transition: width .3s ease-out
+        &:nth-child(5n)
+            margin: 0 0 33px
+        &:hover,
+        &.active
+            img
+                filter: sepia(100%)
+            &:before
+                width: 100%
+
+.l_desc
+    &__row
+        width: calc(100% - 38px)
+        background: url(../img/l_desc__row.png) center bottom 5px no-repeat
+        background-size: contain
+        display: flex
+        justify-content: space-between
+        position: relative
+        margin: 0 0 5px 
+    &__text
+        background: #191b1c
+        font-size: 16px
+        padding: 0 4px 0 0
+        span
+            &:last-child
+                display: none
+    &__price
+        background: #191b1c
+        font-size: 18px
+        color: #fff
+        padding: 0 0 0 4px
+
+.info
+    width: 24px
+    height: 24px
+    background: url(../img/info.svg) center no-repeat
+    background-size: contain
+    cursor: pointer
+    transition: opacity .3s ease-out, filter .3s ease-out
+    &:hover
+        opacity: .7
+    &-l_desc
+        position: absolute
+        right: -38px
+        top: 0
+    &-l_type
+        margin: 0 0 0 17px
+    &-l_dop
+        filter: grayscale(100%)
+        margin: 0 0 0 31px
+    &-title
+        margin: 0 0 0 20px
+
+.l_step
+    height: 0
+    opacity: 0
+    transform: translateX(100%)
+    transition: opacity .3s ease-out, transform .3s ease-out
+    &.active
+        height: auto
+        opacity: 1
+        margin: 82px 0 0
+        transform: translateX(0)
+    &-third
+        margin: 50px 0 0
+    &__top
+        width: calc(100% - 38px)
+        display: flex
+        justify-content: space-between
+        align-items: baseline
+        margin: 0 0 56px
+        &-third
+            margin: 21px 0 46px
+    &__title
+        display: flex
+        align-items: center
+        font-size: 24px
+        color: #fff
+        font-weight: 500
+        letter-spacing: 2px
+    &__steps
+        font-size: 20px
+        color: #9eabb1
+        letter-spacing: 2px
+        span
+            color: #d9aa50
+            font-weight: 500
+    &__link
+        font-size: 14px
+        color: #00c22e
+        text-decoration: underline
+        cursor: pointer
+        margin: 0 0 0 44px
+        transition: opacity .3s ease-out
+        &:hover
+            opacity: .7
+    &__name
+        font-size: 24px
+        color: #fff
+        font-weight: 500
+        margin: 24px 0 48px
+    &__seo
+        font-size: 14px
+        line-height: 140%
+        p
+            margin: 0 0 20px
+        span
+            color: #d9aa50
+        a
+            color: #00c22e
+            text-decoration: underline
+            transition: opacity .3s ease-out
+            &:hover
+                opacity: .7
+    &__ttle
+        display: none
+        &.active
+            display: inline
+
+.l_type
+    display: flex
+    flex-wrap: wrap
+    margin: 0 0 37px
+    input
+        display: none
+        &:checked
+            & + label
+                    .l_type
+                        &__title
+                            color: #fff
+                        &__check
+                            border: 1px solid #fff
+                            &:before
+                                opacity: 1
+    &__el
+        width: calc((100% - 60px) / 4)
+        margin: 0 20px 20px 0
+        &:nth-child(4n)
+            margin: 0 0 20px
+    &__label
+        display: block
+        cursor: pointer
+    &__image
+        height: 108px
+        display: block
+        background-size: contain
+        background-position: left center
+        background-repeat: no-repeat
+        position: relative
+        margin: 0 0 14px
+        &:before
+            content: ""
+            width: 0
+            height: 0
+            border-radius: 100%
+            box-shadow: 0 0 60px 40px rgba(77, 90, 97, .59)
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            margin: auto
+        img
+            max-width: 100%
+            z-index: 1
+            position: relative
+    &__bot
+        display: flex
+    &__check
+        min-width: 27px
+        height: 27px
+        border: 1px solid #818c92
+        transform: rotate(45deg)
+        margin: -3px 0 0 3px
+        transition: border .3s ease-out
+        &:before
+            content: ""
+            width: 14px
+            height: 14px
+            background: #fff
+            opacity: 0
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            margin: auto
+            transition: opacity .3s ease-out
+    &__right
+        margin: 0 0 0 20px
+    &__title
+        display: flex
+        align-items: center
+        font-size: 16px
+        margin: 0 0 6px
+        transition: color .3s ease-out
+    &__price
+        font-size: 14px
+
+.l_dop
+    margin: 0 0 74px
+    input
+        display: none
+        &:checked
+            & + label
+                    .l_dop
+                        &__check
+                            border: 1px solid #fff
+                            &:before
+                                opacity: 1
+                        &__text
+                            color: #fff
+                    .info
+                        filter: grayscale(0)
+    &__el
+        display: flex
+        width: 100%
+        margin: 0 0 5px
+    &__label
+        display: flex
+        align-items: center
+        cursor: pointer
+    &__image
+        width: 50px
+        height: 50px
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        background-color: #313436
+        border-radius: 100%
+    &__content
+        display: flex
+        align-items: center
+        margin: 0 0 0 40px
+    &__check
+        min-width: 20px
+        width: 20px
+        height: 20px
+        border: 1px solid #818c92
+        position: relative
+        transform: rotate(45deg)
+        transition: border .3s ease-out
+        &:before
+            content: ""
+            width: 15px
+            height: 12px
+            background: url(../img/check.svg) center no-repeat
+            background-size: contain
+            opacity: 0
+            position: absolute
+            right: 1px
+            top: -3px
+            transform: rotate(-45deg)
+            transition: opacity .3s ease-out
+    &__text
+        font-size: 16px
+        margin: 0 0 0 24px
+        transition: color .3s ease-out
+    &__price
+        font-size: 14px
+        margin: 0 0 0 20px
+
+.l_buttons
+    display: flex
+    &-third
+        margin: 80px 0
+
+.l_button
+    width: 206px
+    height: 53px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: url(../img/l_button.png) center no-repeat
+    background-size: contain
+    font-size: 12px
+    color: #00c22e
+    font-weight: 700
+    text-align: center
+    text-transform: uppercase
+    cursor: pointer
+    position: relative
+    margin: 0 23px 0 0
+    transition: background .3s ease-out, color .3s ease-out, opacity .3s ease-out
+    &:before
+        content: ""
+        width: 8px
+        height: 9px
+        background: url(../img/arrow.svg) center no-repeat
+        background-size: contain
+        position: absolute
+        left: 16px
+        top: 0
+        bottom: 0
+        margin: auto
+        transition: background .3s ease-out
+    &:last-child
+        margin: 0
+    &:hover
+        background: url(../img/l_button-hover.png) center no-repeat
+        background-size: contain
+        color: #000
+        &:before
+            background: url(../img/arrow-hover.svg) center no-repeat
+    &-modal,
+    &.active
+        background: url(../img/l_button-hover.png) center no-repeat
+        background-size: contain
+        color: #000
+        &:before
+            background: url(../img/arrow-hover.svg) center no-repeat
+            left: inherit
+            right: 16px
+            transform: rotate(180deg)
+        &:hover
+            opacity: .7
+    &-modal
+        &:before
+            display: none
+
+.l_color
+    display: flex
+    flex-wrap: wrap
+    margin: 0 0 50px
+    input
+        display: none
+        &:checked
+            & + label
+                    .l_color
+                        &__check
+                            border: 1px solid #fff
+                            filter: grayscale(0)
+                        &__text
+                            color: #fff
+    &__el
+        margin: 0 40px 40px 0
+    &__label
+        display: flex
+        flex-direction: column
+        align-items: center
+        cursor: pointer
+    &__check
+        min-width: 28px
+        width: 28px
+        height: 28px
+        border: 1px solid #818c92
+        position: relative
+        filter: grayscale(100%)
+        transform: rotate(45deg)
+        transition: background .3s ease-out, border .3s ease-out, filter .3s ease-out
+    &__text
+        font-size: 14px
+        color: #818c92
+        text-align: center
+        margin: 18px 0 0
+        transition: color .3s ease-out
+
+.l_size
+    display: flex
+    flex-wrap: wrap
+    margin: 0 0 50px
+    input
+        display: none
+        &:checked
+            & + label
+                    .l_size
+                        &__check
+                            border: 1px solid #fff
+                            &:before
+                                opacity: 1
+                        &__size,
+                        &__text
+                            color: #fff
+    &__el
+        margin: 0 40px 40px 0
+        &:nth-child(6n)
+            margin: 0 0 40px
+    &__label
+        display: flex
+        flex-direction: column
+        cursor: pointer
+    &__check
+        min-width: 28px
+        width: 28px
+        height: 28px
+        border: 1px solid #818c92
+        position: relative
+        transform: rotate(45deg)
+        transition: background .3s ease-out, border .3s ease-out
+        &:before
+            content: ""
+            width: 14px
+            height: 14px
+            background: #fff
+            opacity: 0
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            margin: auto
+            transition: opacity .3s ease-out
+    &__size
+        font-size: 20px
+        text-transform: uppercase
+        margin: 18px 0 0
+        transition: color .3s ease-out
+    &__text
+        font-size: 14px
+        color: #818c92
+        text-align: center
+        margin: 9px 0 0
+        transition: color .3s ease-out
+
+.l_when
+    display: flex
+    justify-content: space-between
+    margin: 0 0 15px
+    input
+        display: none
+        &:checked
+            & + label
+                    box-shadow: none
+                    .l_when
+                        &__check
+                            border: 1px solid #fff
+                            &:before
+                                opacity: 1
+                        &__text
+                            color: #fff
+    &__el
+        width: calc((100% - 20px) / 2)
+    &__label
+        height: 122px
+        display: flex
+        align-items: center
+        background-color: #1e2122
+        cursor: pointer
+        box-shadow: 0 9px 51px rgba(18, 19, 20, .89)
+        padding: 0 50px
+        transition: box-shadow .3s ease-out
+    &__check
+        min-width: 28px
+        width: 28px
+        height: 28px
+        border: 1px solid #818c92
+        position: relative
+        transform: rotate(45deg)
+        transition: background .3s ease-out, border .3s ease-out
+        &:before
+            content: ""
+            width: 14px
+            height: 14px
+            background: #fff
+            opacity: 0
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            margin: auto
+            transition: opacity .3s ease-out
+    &__text
+        font-size: 16px
+        margin: 0 0 0 25px
+        span
+            color: #d9aa50
+    &__help
+        font-size: 16px
+        color: #d9aa50
+        margin: 15px 0 0
+
+.input
+    width: 100%
+    background: none
+    border-bottom: 1px solid #818c92
+    font-size: 16px
+    padding: 0 0 10px
+    transition: border .3s ease-out
+    margin: 0 0 24px
+    &:focus
+        border-bottom: 1px solid #00c302
+
+.inputs
+    display: flex
+    justify-content: space-between
+    .input
+        width: calc((100% - 20px) / 2)
+
+.l_ord
+    margin: 18px 0 42px
+    input
+        display: none
+        &:checked
+            & + label
+                    .l_ord
+                        &__check
+                            border: 1px solid #fff
+                            &:before
+                                opacity: 1
+                        &__text
+                            color: #fff
+    &__label
+        display: flex
+        align-items: center
+        cursor: pointer
+    &__check
+        min-width: 20px
+        width: 20px
+        height: 20px
+        border: 1px solid #818c92
+        position: relative
+        transform: rotate(45deg)
+        transition: border .3s ease-out
+        &:before
+            content: ""
+            width: 15px
+            height: 12px
+            background: url(../img/check.svg) center no-repeat
+            background-size: contain
+            opacity: 0
+            position: absolute
+            right: 1px
+            top: -3px
+            transform: rotate(-45deg)
+            transition: opacity .3s ease-out
+    &__text
+        font-size: 14px
+        margin: 0 0 0 20px
+        transition: color .3s ease-out
+
+.l_pay
+    display: flex
+    margin: 0 0 48px
+    input
+        display: none
+        &:checked
+            & + label
+                    .l_pay
+                        &__check
+                            border: 1px solid #fff
+                            &:before
+                                opacity: 1
+                        &__text
+                            color: #fff
+    &__el
+        margin: 0 50px 0 0
+        &:nth-child
+            margin: 0
+    &__label
+        display: flex
+        align-items: center
+        cursor: pointer
+    &__check
+        min-width: 28px
+        width: 28px
+        height: 28px
+        border: 1px solid #818c92
+        position: relative
+        transform: rotate(45deg)
+        transition: background .3s ease-out, border .3s ease-out
+        &:before
+            content: ""
+            width: 14px
+            height: 14px
+            background: #fff
+            opacity: 0
+            position: absolute
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            margin: auto
+            transition: opacity .3s ease-out
+    &__text
+        font-size: 16px
+        margin: 0 0 0 25px
+        span
+            color: #d9aa50
+
+.slick-slide
+    outline: none
+
+.l_nav
+    width: 30px
+    height: 30px
+    background: url(../img/l_nav.png) center no-repeat
+    background-size: 6px 11px
+    z-index: 1
+    position: absolute
+    top: 0
+    bottom: 0
+    margin: auto
+    display: none !important
+    &-prev
+        left: -12px
+    &-next
+        right: -12px
+        transform: rotate(180deg)
+
+.l_footer
+    width: 100%
+    background: #0a0b0b
+    padding: 50px 0
+
+.navs
+    &__nav
+        font-size: 16px
+        color: #95a1a7
+        margin: 0 15px
+        transition: color .3s ease-out
+        &:hover
+            color: #00c22e
+
+.socials
+    &-modal
+        position: absolute
+        right: 55px
+        bottom: 55px
+    &__social
+        max-width: 18px
+        max-height: 18px
+        margin: 0 13px
+        transition: opacity .3s ease-out
+        &:hover
+            opacity: .7
+
+.success
+    &__img
+        width: 150%
+        margin: 0 0 0 -18%
+    &__wrp
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        margin: -255px 0 190px
+    &__h1
+        font-size: 34px
+        color: #fff
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 4px
+        margin: 0 0 40px
+    &__text
+        max-width: 570px
+        font-size: 16px
+        color: #95a1a7
+        line-height: 200%
+
+.overlay
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, .7)
+    opacity: 0
+    pointer-events: none
+    z-index: 5
+    position: fixed
+    left: 0
+    top: 0
+    transition: opacity .3s ease-out
+    &.active
+        opacity: 1
+        pointer-events: auto
+
+.modal
+    width: 1171px
+    max-width: 90%
+    height: 662px
+    max-height: 90%
+    background-color: #191b1c
+    opacity: 0
+    pointer-events: none
+    z-index: 5
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    margin: auto
+    transition: opacity .3s ease-out
+    &.active
+        opacity: 1
+        pointer-events: auto
+    &__close
+        width: 20px
+        height: 20px
+        background: url(../img/modal__close.png) center no-repeat
+        background-size: contain
+        cursor: pointer
+        position: absolute
+        right: 55px
+        top: 55px
+        transition: opacity .3s ease-out
+        &:hover
+            opacity: .7
+
+    &_menu
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        background-image: url(../img/modal_menu.png)
+        background-color: #191b1c
+        background-position: left center
+        background-repeat: no-repeat
+        background-size: contain
+        padding: 50px 16.5%
+        &__navs
+            display: flex
+            flex-direction: column
+        &__nav
+            font-size: 16px
+            color: #fff
+            font-weight: 700
+            text-transform: uppercase
+            margin: 15px 0
+            transition: color .3s ease-out
+            &:hover
+                color: #00c22e
+    &_three
+        width: 1006px
+        height: 476px
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        background-image: url(../img/modal_three.png)
+        background-color: #191b1c
+        background-position: left center
+        background-repeat: no-repeat
+        background-size: contain
+        padding: 50px 7.7%
+        &__content
+            width: 45%
+            max-width: 396px
+        &__title
+            font-size: 34px
+            color: #fff
+            font-weight: 700
+            text-transform: uppercase
+            letter-spacing: 1.48px
+            margin: 0 0 40px
+        &__text
+            font-size: 14px
+            color: #95a1a7
+            line-height: 170%
+            margin: 0 0 45px
+    &_respo
+        background-image: url(../img/modal_respo.png)
+    &_break
+        background-image: url(../img/modal_break.png)
+    &_aero
+        background-image: url(../img/modal_aero.png)
+    &_lorem
+        width: 1013px
+        height: 609px
+        background-image: url(../img/modal_menu.png)
+
+@media screen and (max-width: 1024px)
+    .wrapper
+        padding: 0 5%
+    .l_header
+        &__menu
+            padding: 0 5% 32px 0
+    .success
+        &__img
+            margin: 50px 0 0 -18%
+        &__wrp
+            margin: -200px 0 100px
+        &__h1
+            font-size: 30px
+
+@media screen and (max-width: 768px)
+    .l_order
+        &:before
+            display: none
+
+    .l_card
+        flex-direction: column
+        position: relative
+        padding: 130px 0 110px
+        &__left
+            width: 100%
+            margin: 100px 0 0
+        &__right
+            width: 100%
+        &__image_wrp
+            height: 342px
+            display: flex !important
+            justify-content: center
+            margin: 0 0 40px
+            &:before
+                width: 20%
+                height: 20%
+        &__image
+            width: auto
+            height: 100%
+        &__block
+            width: 100%
+            display: flex
+            justify-content: space-between
+            align-items: center
+            position: absolute
+            left: 0
+            top: 130px
+        &__h1
+            font-size: 30px
+            letter-spacing: 1.3px
+            margin: 0
+    
+    .l_desc
+        display: flex
+        flex-direction: column
+        position: relative
+        &__row
+            width: 100%
+            justify-content: flex-end
+            position: static
+            &:nth-child(1)
+                order: 2
+            &:nth-child(2)
+                order: 3
+            &:nth-child(3)
+                order: 1
+        &__text
+            span
+                &:first-child
+                    display: none
+                &:last-child
+                    display: inline
+    .info
+        &-l_desc
+            right: inherit
+            left: -38px
+            bottom: -43px
+            margin: auto
+    
+    .l_gallery
+        justify-content: center
+        &__img
+            width: 46px
+            max-height: 54px
+            margin: 0 14px 0 0
+            &:nth-child(5n)
+                margin: 0 14px 0 0
+
+    .l_buttons
+        justify-content: center
+
+    .l_step
+        &__top
+            width: 100%
+        &__title
+            &-link
+                width: 100%
+                justify-content: space-between
+        &__seo
+            text-align: center
+
+    .l_nav
+        display: block !important
+
+    .l_header
+        height: 88px
+        &__menu
+            width: 110px
+            align-items: center
+            padding: 0 5% 0 0
+            &:before
+                border-top: 88px solid #0a0b0b
+                border-left: 75px solid transparent
+                left: -75px
+        &__right
+            width: auto
+            flex-direction: row-reverse
+            padding: 0 160px 0 0
+
+    .l_currency
+        margin: 0 0 0 54px
+        &:hover
+            .l_currency__drop
+                transform: scale(0)
+        &.active
+            .l_currency__drop
+                transform: scale(1)
+
+    .l_lang
+        margin: 0
+        &:hover
+            .l_lang__drop
+                transform: scale(0)
+        &.active
+            .l_lang__drop
+                transform: scale(1)
+
+    .success
+        &__wrp
+            margin: -140px 0 100px
+
+    .l_order
+        background: url(../img/l_order-mobile.png) center no-repeat #191b1c
+        background-size: cover
+
+    .modal
+        &_menu
+            background-position: -200% center
+        &_three
+            background-position: -400% center
+            &__content
+                width: 55%
+        &_lorem
+            background-position: -100% center
+
+.modal_test
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    margin: auto
+    div
+        font-size: 20px
+        color: #fff
+        text-align: center
+        text-transform: uppercase
+        cursor: pointer
+        margin: 10px 0
+        transition: color .3s ease-out
+        &:hover
+            color: #00c22e
+
+@media screen and (max-width: 640px)
+    .l_card
+        padding: 80px 0 50px
+        &__block
+            top: 80px
+        &__h1
+            max-width: 154px
+            font-size: 18px
+            letter-spacing: 0.78px
+            br
+                display: none
+        &__image_wrp
+            height: 300px
+            margin: 0
+
+    .l_gallery
+        display: none
+
+    .l_step
+        &.active
+            margin: 40px 0 0
+        &__top
+            margin: 0 0 33px
+            &-title
+                display: none
+        &__steps
+            display: none
+        &__title
+            width: 100%
+            justify-content: space-between
+            font-size: 18px
+        &__link
+            max-width: 120px
+            font-size: 12px
+            text-align: right
+        &__name
+            font-size: 18px
+            margin: 0 0 30px
+        &__seo
+            font-size: 12px
+
+    .l_type
+        margin: 0 0 26px
+        &__el
+            width: calc((100% - 40px) / 2)
+            margin: 0 12px 40px 0
+            &:nth-child
+                margin: 0 0 40px
+        &__check
+            min-width: 12px
+            height: 12px
+            margin: 0
+            &:before
+                width: 4px
+                height: 4px
+        &__label
+            display: flex
+            flex-direction: column
+            align-items: center
+        &__image
+            width: 100%
+            height: 90px
+            background-position: center
+        &__right
+            margin: 0 0 0 10px
+        &__title
+            font-size: 12px
+            margin: 0 0 4px
+        &__price
+            font-size: 12px
+
+    .info
+        &-l_type
+            display: none
+        &-l_dop
+            position: absolute
+            right: 0
+
+    .l_dop
+        margin: 0 0 40px
+        &__label
+            width: 100%
+            justify-content: space-between
+        &__image
+            width: 37px
+            height: 37px
+        &__content
+            width: calc(100% - 55px)
+            flex-direction: column
+            align-items: flex-start
+            position: relative
+            padding: 0 30px 0 40px
+            margin: 0 0 0 14px
+        &__check
+            min-width: 16px
+            width: 16px
+            height: 16px
+            position: absolute
+            left: 0
+            top: 5px
+            &:before
+                right: -1px
+                top: -5px
+        &__text
+            font-size: 12px
+            margin: 0 0 4px
+        .l_dop__price
+            font-size: 12px
+            margin: 0
+
+    .l_buttons
+        justify-content: space-between
+        &-third
+            margin: 0 0 50px
+
+    .l_button
+        width: calc((100% - 20px) / 2)
+        max-width: 156px
+        height: 40px
+        &-modal
+            width: auto
+
+    .l_color
+        margin: 0 0 6px
+        &__el
+            width: 50px
+            margin: 0 30px 30px 0
+            &:nth-child(5n)
+                margin: 0 0 30px
+        &__text
+            font-size: 12px
+
+    .l_size
+        margin: 0 0 20px
+        &__el
+            width: calc((100% - 80px) / 3)
+            margin: 0 40px 30px 0
+            &:nth-child(3n)
+                margin: 0 0 30px
+        &__label
+            flex-direction: row
+            align-items: center
+            position: relative
+            padding: 0 0 28px
+        &__text
+            position: absolute
+            left: 0
+            bottom: 0
+        &__size
+            margin: 0 0 0 16px
+
+    .l_when
+        flex-direction: column
+        &__el
+            width: 100%
+            margin: 0 0 15px
+        &__label
+            height: 80px
+            padding: 0 40px
+        &__check
+            min-width: 20px
+            width: 20px
+            height: 20px
+            &:before
+                width: 10px
+                height: 10px
+        &__text
+            font-size: 14px
+            margin: 0 0 0 18px
+        &__help
+            font-size: 12px
+
+    .input
+        font-size: 14px
+
+    .l_pay
+        &__el
+            margin: 0 30px 0 0
+            &:nth-child(3n)
+                margin: 0
+        &__check
+            min-width: 20px
+            width: 20px
+            height: 20px
+            &:before
+                width: 10px
+                height: 10px
+        &__text
+            font-size: 12px
+            margin: 0 0 0 15px
+
+    .l_header
+        height: 70px
+        &__menu
+            width: auto
+            background: none
+            &:before
+                display: none
+        &__right
+            width: 100%
+            justify-content: center
+            padding: 0 40px
+
+    .l_currency
+        margin: 0 0 0 35px
+        &__text
+            display: none
+        &__symbol
+            margin: 0
+        &__drop
+            left: -50px
+
+    .l_logo
+        &-l_header
+            width: 33px
+            height: 27px
+            min-width: 33px
+            overflow: hidden
+            position: absolute
+            left: 5%
+            top: 0
+            bottom: 0
+            margin: auto
+
+    .wrapper
+        &-l_footer
+            flex-direction: column
+
+    .l_logo
+        &-l_footer
+            margin: 0 0 30px
+
+    .navs
+        display: flex
+        flex-direction: column
+        margin: 0 0 30px
+        &__nav
+            margin: 0 0 10px
+            &:last-child
+                margin: 0
+
+    .l_order
+        min-height: calc(100vh - 277px)
+        .slick-dots
+            display: flex !important
+            justify-content: center
+            margin: 12px 0 0
+            li
+                width: 9px
+                height: 9px
+                background: #fff
+                transform: rotate(45deg)
+                opacity: .3
+                margin: 0 7px
+                transition: opacity .3s ease-out
+                &.slick-active
+                    opacity: 1
+            button
+                font-size: 0
+                padding: 0
+
+    .success
+        &__img
+            width: 150%
+            margin: 120px 0 0 -18%
+        &__wrp
+            margin: -40px 0 100px
+        &__h1
+            font-size: 18px
+            letter-spacing: 1px
+            margin: 0 0 24px
+        &__text
+            font-size: 14px
+
+    .modal
+        background-size: auto
+        &__close
+            right: 25px
+            top: 25px
+        &_menu
+            background-position: 110% center
+            &__nav
+                font-size: 14px
+                margin: 8px 0
+        &_three
+            background-position: 120% center
+            &__content
+                width: 80%
+            &__title
+                font-size: 24px
+                margin: 0 0 20px
+            &__text
+                font-size: 12px
+                margin: 0 0 25px
+        &_respo
+            background-position: 40% center
+        &_break
+            background-position: 120% center
+        &_aero
+            background-position: 200% center
+        &_lorem
+            background-position: 140% center
+
+    .socials
+        &-modal
+            right: 25px
+            bottom: 25px
+
+@media screen and (max-width: 375px)
+    .modal
+        &_three
+            background-position: 110% center
+        &_respo
+            background-position: 40% center
+        &_aero
+            background-position: 170% center
+        &_break
+            background-position: 110% center
+        &_lorem
+            background-position: 120% center
+
+@media screen and (max-width: 320px)
+    .info
+        &-l_desc
+            display: none
+
+    .l_button
+        font-size: 11px
+        text-transform: none
+
+    .modal
+        &_menu
+            background-position: 95% center
+        &_three
+            background-position: 100% center
+        &_respo
+            background-position: 40% center
+        &_aero
+            background-position: 140% center
+        &_break
+            background-position: 95% center
+        &_lorem
+            background-position: 105% center
