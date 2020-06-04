@@ -440,6 +440,31 @@
                             <input class="input" name="b_country" placeholder="Country *" type="text">
                             <input class="input" name="phone-number" placeholder="Phone number *" type="text">
                         </div>
+
+                        <div class="l_ord">
+                            <input id="same" value="same" name="same" type="checkbox">
+                            <label class="l_ord__label" for="same">
+                                <span class="l_ord__check"></span>
+                                <span class="l_ord__text">My shipping address is the same</span>
+                            </label>
+                        </div>
+                        
+                        <div class="l_shipping active">
+                            <div class="l_step__name">Shipping address:</div>
+                            <div class="inputs">
+                                <input class="input" name="s_street" placeholder="Street address *" type="text">
+                                <input class="input" name="s_city" placeholder="City *" type="text">
+                            </div>
+                            <div class="inputs">
+                                <input class="input" name="s_state" placeholder="State/province " type="text">
+                                <input class="input" name="s_zip-code" placeholder="ZIP/postal code " type="text">
+                            </div>
+                            <div class="inputs">
+                                <input class="input" name="s_b_country" placeholder="Country *" type="text">
+                                <input class="input" name="s_phone-number" placeholder="Phone number *" type="text">
+                            </div>
+                        </div>
+
                         <div class="l_ord">
                             <input id="agree" value="agree" name="agree" type="checkbox" checked>
                             <label class="l_ord__label" for="agree">

@@ -117,4 +117,13 @@ $(document).ready(function () {
         $('.overlay, .modal_lorem').addClass("active");
     });
 
+    // Shipping address
+    $("#same").on("click", function() {
+        if ($('#same').is(':checked')) {
+            $('.l_shipping').removeClass("active");
+        } else {
+            $('.l_shipping').addClass("active"); 
+        }
+    });
+
 });
