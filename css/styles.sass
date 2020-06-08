@@ -1381,7 +1381,7 @@ body
     .l_buttons
         justify-content: space-between
         &-third
-            margin: 0 0 50px
+            margin: 60px 0 50px
 
     .l_button
         width: calc((100% - 20px) / 2)
@@ -1548,10 +1548,14 @@ body
             right: 25px
             top: 25px
         &_menu
-            background-position: 110% center
+            display: flex
+            justify-content: center
+            align-items: center
+            background-size: 131px auto
+            background-position: left bottom
+            background-image: url(../img/modal_menu-nav.png)
             &__nav
-                font-size: 14px
-                margin: 8px 0
+                margin: 10px 0
         &_three
             align-items: flex-start
             background-size: 100% auto
@@ -1592,8 +1596,6 @@ body
         text-transform: none
 
     .modal
-        // &_menu
-        //     background-position: 95% center
         &_three
             background-position: center 550%
         &_respo
