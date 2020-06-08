@@ -1388,7 +1388,7 @@ body
         max-width: 156px
         height: 40px
         &-modal
-            width: auto
+            width: 206px
 
     .l_color
         margin: 0 0 6px
@@ -1543,7 +1543,7 @@ body
             font-size: 14px
 
     .modal
-        background-size: auto
+        height: 100%
         &__close
             right: 25px
             top: 25px
@@ -1553,43 +1553,36 @@ body
                 font-size: 14px
                 margin: 8px 0
         &_three
-            background-position: 120% center
+            align-items: flex-start
+            background-size: 100% auto
+            background-position: center bottom
+            background-image: url(../img/modal_three-mobile.png)
+            padding: 75px 7.7% 50px
             &__content
-                width: 80%
+                width: 100%
             &__title
+                width: 100%
                 font-size: 24px
                 margin: 0 0 20px
             &__text
+                width: 100%
                 font-size: 12px
                 margin: 0 0 25px
         &_respo
-            background-position: 40% center
+            background-image: url(../img/modal_respo-mobile.png)
         &_break
-            background-position: 120% center
+            background-image: url(../img/modal_break-mobile.png)
         &_aero
-            background-position: 200% center
+            background-image: url(../img/modal_aero-mobile.png)
         &_lorem
-            background-position: 140% center
+            background-image: url(../img/modal_menu-mobile.png)
 
     .socials
         &-modal
             right: 25px
             bottom: 25px
 
-@media screen and (max-width: 375px)
-    .modal
-        &_three
-            background-position: 110% center
-        &_respo
-            background-position: 40% center
-        &_aero
-            background-position: 170% center
-        &_break
-            background-position: 110% center
-        &_lorem
-            background-position: 120% center
-
-@media screen and (max-width: 320px)
+@media screen and (max-width: 320px) and (max-height: 480px)
     .info
         &-l_desc
             display: none
@@ -1599,15 +1592,15 @@ body
         text-transform: none
 
     .modal
-        &_menu
-            background-position: 95% center
+        // &_menu
+        //     background-position: 95% center
         &_three
-            background-position: 100% center
+            background-position: center 550%
         &_respo
-            background-position: 40% center
+            background-position: center 220%
         &_aero
-            background-position: 140% center
+            background-position: center 220%
         &_break
-            background-position: 95% center
+            background-position: center 200%
         &_lorem
-            background-position: 105% center
+            background-position: center 220%
