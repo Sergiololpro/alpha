@@ -2,11 +2,11 @@ $(document).ready(function () {
 
     // Gallery change
     $(".l_gallery__img").on("click", function() {
-        var id = $(this).index + 1;
+        var id = $(this).index();
 
         $(".l_gallery__img").removeClass("active");
         $(this).addClass("active");
-
+        
         $('.l_card__slider').slick('slickGoTo', id, false);
     });
 
