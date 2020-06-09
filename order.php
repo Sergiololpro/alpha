@@ -348,7 +348,7 @@
                             <div class="l_button active go_to_3">CHECKOUT</div>
                         </div>
                     </div>
-                    <div data-id="3" class="l_step l_step-third">
+                    <div data-id="3" class="l_step l_step-third active">
                         <div class="l_when">
                             <div class="l_when__el">
                                 <input id="when_1" value="when_1" name="when" type="radio" checked>
@@ -437,7 +437,12 @@
                             <input class="input" name="zip-code" placeholder="ZIP/postal code " type="text">
                         </div>
                         <div class="inputs">
-                            <input class="input" name="b_country" placeholder="Country *" type="text">
+                            <select name="b_country" data-placeholder="Country *" class="input select2">
+                                <option value="">&nbsp;</option>
+                                <option value="Country 1">Country 1</option>
+                                <option value="Country 2">Country 2</option>
+                                <option value="Country 3">Country 3</option>
+                            </select>
                             <input class="input" name="phone-number" placeholder="Phone number *" type="text">
                         </div>
 
@@ -460,7 +465,12 @@
                                 <input class="input" name="s_zip-code" placeholder="ZIP/postal code " type="text">
                             </div>
                             <div class="inputs">
-                                <input class="input" name="s_b_country" placeholder="Country *" type="text">
+                                <select name="s_b_country" data-placeholder="Country *" class="input select2">
+                                    <option value="">&nbsp;</option>
+                                    <option value="Country 1">Country 1</option>
+                                    <option value="Country 2">Country 2</option>
+                                    <option value="Country 3">Country 3</option>
+                                </select>
                                 <input class="input" name="s_phone-number" placeholder="Phone number *" type="text">
                             </div>
                         </div>

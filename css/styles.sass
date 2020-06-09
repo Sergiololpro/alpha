@@ -814,8 +814,9 @@ body
 .inputs
     display: flex
     justify-content: space-between
+    .select2,
     .input
-        width: calc((100% - 20px) / 2)
+        width: calc((100% - 20px) / 2) !important
 
 .l_ord
     margin: 18px 0 42px
@@ -1089,6 +1090,44 @@ body
     display: none
     &.active
         display: block
+
+.select2-container
+    width: 100% !important
+    font-size: 16px
+    margin: 0 0 24px
+
+.select2-selection,
+.select2-selection__rendered
+    height: 29px !important
+    background: transparent !important
+    border: none !important
+    border-bottom: 1px solid #818c92 !important
+    border-radius: 0 !important
+    color: #818c92 !important
+    outline: none
+
+.select2-selection__rendered
+    width: 100%
+    display: flex !important
+    align-items: center
+    padding: 0 0 10px !important
+
+.select2-selection__arrow
+    width: 12px !important
+    height: 8px !important
+    right: 0 !important
+    bottom: 10px
+    margin: auto
+    transition: transform .3s ease-out
+
+.select2-selection__placeholder
+    color: #818c92 !important
+
+.select2-results__option
+    height: 40px
+    display: flex
+    align-items: center
+    padding: 0 22px
 
 @media screen and (max-width: 1024px)
     .wrapper
