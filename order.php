@@ -348,7 +348,7 @@
                             <div class="l_button active go_to_3">CHECKOUT</div>
                         </div>
                     </div>
-                    <div data-id="3" class="l_step l_step-third active">
+                    <div data-id="3" class="l_step l_step-third">
                         <div class="l_when">
                             <div class="l_when__el">
                                 <input id="when_1" value="when_1" name="when" type="radio" checked>
