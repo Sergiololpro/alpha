@@ -667,6 +667,11 @@ body
                             filter: grayscale(0)
                         &__text
                             color: #fff
+        &:not(:checked)
+            & + label
+                    .l_color
+                        &__check
+                            background: transparent !important
     &__el
         margin: 0 40px 40px 0
     &__label
@@ -678,6 +683,7 @@ body
         min-width: 28px
         width: 28px
         height: 28px
+        background: transparent
         border: 1px solid #818c92
         position: relative
         filter: grayscale(100%)
