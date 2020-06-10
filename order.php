@@ -109,6 +109,7 @@
                                         </span> 
                                     </span>
                                 </label>
+                                <span class="info info-l_type"></span>
                             </div>
                             <div class="l_type__el">
                                 <input id="type_2" value="type_2" name="type" type="radio" checked>
@@ -124,6 +125,7 @@
                                         </span> 
                                     </span>
                                 </label>
+                                <span class="info info-l_type"></span>
                             </div>
                             <div class="l_type__el">
                                 <input id="type_3" value="type_3" name="type" type="radio">
@@ -139,6 +141,7 @@
                                         </span> 
                                     </span>
                                 </label>
+                                <span class="info info-l_type"></span>
                             </div>
                             <div class="l_type__el">
                                 <input id="type_4" value="type_4" name="type" type="radio">
@@ -149,14 +152,12 @@
                                     <span class="l_type__bot">
                                         <span class="l_type__check"></span>
                                         <span class="l_type__right">
-                                            <span class="l_type__title">
-                                                Combo
-                                                <span class="info info-l_type"></span>
-                                            </span>
+                                            <span class="l_type__title">Combo</span>
                                             <span class="l_type__price">£378</span>
                                         </span> 
                                     </span>
                                 </label>
+                                <span class="info info-l_type"></span>
                             </div>
                         </div>
                         <div class="l_dop">
