@@ -280,7 +280,7 @@ body
             width: 0
             height: 0
             border-radius: 100%
-            box-shadow: 0 0 150px 80px rgba(77, 90, 97, 0.59)
+            box-shadow: 0 0 150px 100px rgba(255, 255, 255, 0.59)
             position: absolute
             left: 0
             right: 0
@@ -1139,6 +1139,29 @@ body
     align-items: center
     padding: 0 22px
 
+.modal_test
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    margin: auto
+    div
+        font-size: 20px
+        color: #fff
+        text-align: center
+        text-transform: uppercase
+        cursor: pointer
+        margin: 10px 0
+        transition: color .3s ease-out
+        &:hover
+            color: #00c22e
+
 @media screen and (max-width: 1024px)
     .wrapper
         padding: 0 5%
@@ -1159,7 +1182,7 @@ body
         &__right
             width: 100%
         &__image_wrp
-            height: 342px
+            height: 500px
             display: flex !important
             justify-content: center
             margin: 0 0 40px
@@ -1289,48 +1312,54 @@ body
         &_lorem
             background-position: -100% center
 
-.modal_test
-    height: 100%
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    position: absolute
-    left: 0
-    right: 0
-    top: 0
-    bottom: 0
-    margin: auto
-    div
-        font-size: 20px
-        color: #fff
-        text-align: center
-        text-transform: uppercase
-        cursor: pointer
-        margin: 10px 0
-        transition: color .3s ease-out
-        &:hover
-            color: #00c22e
-
 @media screen and (max-width: 768px)
     .success
         &__wrp
             margin: -140px 0 100px
 
+    .l_card
+        flex-direction: column
+        position: relative
+        padding: 130px 0 110px
+        &__left
+            width: 100%
+            margin: 100px 0 0
+        &__right
+            width: 100%
+        &__image_wrp
+            height: 342px
+
 @media screen and (max-width: 640px)
     .l_card
         padding: 80px 0 50px
         &__block
-            top: 80px
+            position: static
+            margin: 40px 0 0
+        &__left
+            margin: 70px 0 0
         &__h1
-            max-width: 154px
             font-size: 18px
+            text-align: center
             letter-spacing: 0.78px
+            position: absolute
+            left: 0
+            right: 0
+            top: 100px
+            margin: auto
             br
                 display: none
         &__image_wrp
             height: 300px
             margin: 0
+
+    .l_desc
+        width: 100%
+        &__row
+            width: calc(100% - 38px)
+            justify-content: space-between
+        &__price,
+        &__text
+            background: transparent
 
     .l_gallery
         display: none
@@ -1395,6 +1424,10 @@ body
         &-l_dop
             position: absolute
             right: 0
+        &-l_desc
+            right: 0
+            left: inherit
+            bottom: inherit
 
     .l_dop
         margin: 0 0 40px
@@ -1637,10 +1670,6 @@ body
             bottom: 25px
 
 @media screen and (max-width: 320px) and (max-height: 480px)
-    .info
-        &-l_desc
-            display: none
-
     .l_button
         font-size: 11px
         text-transform: none
