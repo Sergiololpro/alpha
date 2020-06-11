@@ -1145,15 +1145,6 @@ body
     .l_header
         &__menu
             padding: 0 5% 32px 0
-    .success
-        &__img
-            margin: 50px 0 0 -18%
-        &__wrp
-            margin: -200px 0 100px
-        &__h1
-            font-size: 30px
-
-@media screen and (max-width: 768px)
     .l_order
         &:before
             display: none
@@ -1277,8 +1268,12 @@ body
                 transform: scale(1)
 
     .success
+        &__img
+            margin: 50px 0 0 -18%
         &__wrp
-            margin: -140px 0 100px
+            margin: -200px 0 100px
+        &__h1
+            font-size: 30px
 
     .l_order
         background: url(../img/l_order-mobile.png) center no-repeat #191b1c
@@ -1316,6 +1311,11 @@ body
         transition: color .3s ease-out
         &:hover
             color: #00c22e
+
+@media screen and (max-width: 768px)
+    .success
+        &__wrp
+            margin: -140px 0 100px
 
 @media screen and (max-width: 640px)
     .l_card
