@@ -104,7 +104,7 @@
                                     <span class="l_type__bot">
                                         <span class="l_type__check"></span>
                                         <span class="l_type__right">
-                                            <span class="l_type__title">Street</span>
+                                            <span class="l_type__title">Street / Sport</span>
                                             <span class="l_type__price">£279.99</span>
                                         </span> 
                                     </span>
@@ -136,7 +136,7 @@
                                     <span class="l_type__bot">
                                         <span class="l_type__check"></span>
                                         <span class="l_type__right">
-                                            <span class="l_type__title">Jet</span>
+                                            <span class="l_type__title">Jet / Cruiser</span>
                                             <span class="l_type__price">£178</span>
                                         </span> 
                                     </span>
@@ -152,7 +152,7 @@
                                     <span class="l_type__bot">
                                         <span class="l_type__check"></span>
                                         <span class="l_type__right">
-                                            <span class="l_type__title">Combo</span>
+                                            <span class="l_type__title">Ultra Combo</span>
                                             <span class="l_type__price">£378</span>
                                         </span> 
                                     </span>
@@ -224,7 +224,7 @@
                         </div>
                         <div class="l_buttons">
                             <div class="l_button">BACK</div>
-                            <div class="l_button active go_to_2">Select colour</div>
+                            <div class="l_button active go_to_2">Next</div>
                         </div>
                     </div>
                     <div data-id="2" class="l_step">
@@ -346,7 +346,7 @@
 
                         <div class="l_buttons">
                             <div class="l_button go_to_1">BACK</div>
-                            <div class="l_button active go_to_3">CHECKOUT</div>
+                            <div class="l_button active go_to_3">Next</div>
                         </div>
                     </div>
                     <div data-id="3" class="l_step l_step-third">
@@ -374,26 +374,6 @@
                         <div class="l_step__top l_step__top-title l_step__top-third">
                             <div class="l_step__title">Select your size:</div>
                             <div class="l_step__steps"><span>Step 3</span> of 3</div>
-                        </div>
-                        <div class="inputs">
-                            <input class="input" name="name" placeholder="Name *" type="text">
-                            <input class="input" name="surname" placeholder="Surname" type="text">
-                        </div>
-                        <div class="inputs">
-                            <input class="input" name="phone" placeholder="Phone number *" type="text">
-                            <input class="input" name="country" placeholder="Country *" type="text">
-                        </div>
-                        <input class="input" name="email" placeholder="Email address *" type="email">
-                        <div class="l_ord">
-                            <input id="order" value="order" name="order" type="checkbox" checked>
-                            <label class="l_ord__label" for="order">
-                                <span class="l_ord__check"></span>
-                                <span class="l_ord__text">Order me to be able modifing order later</span>
-                            </label>
-                        </div>
-                        <div class="inputs">
-                            <input class="input" name="pass" placeholder="Create password *" type="password">
-                            <input class="input" name="pass2" placeholder="Repeat password *" type="password">
                         </div>
                         <div class="l_step__name">Pay by:</div>
                         <div class="l_pay">
@@ -474,6 +454,30 @@
                                 </select>
                                 <input class="input" name="s_phone-number" placeholder="Phone number *" type="text">
                             </div>
+                        </div>
+
+                        <div class="l_account">
+                            <div class="l_step__name">Account:</div>
+                            <div class="inputs">
+                                <input class="input" name="name" placeholder="Name *" type="text">
+                                <input class="input" name="surname" placeholder="Surname" type="text">
+                            </div>
+                            <div class="inputs">
+                                <input class="input" name="phone" placeholder="Phone number *" type="text">
+                                <input class="input" name="country" placeholder="Country *" type="text">
+                            </div>
+                            <input class="input" name="email" placeholder="Email address *" type="email">
+                            <div class="inputs">
+                                <input class="input" name="pass" placeholder="Create password *" type="password">
+                                <input class="input" name="pass2" placeholder="Repeat password *" type="password">
+                            </div>
+                        </div>
+                        <div class="l_ord">
+                            <input id="order" value="order" name="order" type="checkbox">
+                            <label class="l_ord__label" for="order">
+                                <span class="l_ord__check"></span>
+                                <span class="l_ord__text">Create account to track / modify order</span>
+                            </label>
                         </div>
 
                         <div class="l_ord">

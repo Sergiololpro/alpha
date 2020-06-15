@@ -126,6 +126,15 @@ $(document).ready(function () {
         }
     });
 
+    // Create account
+    $("#order").on("click", function() {
+        if ($('#order').is(':checked')) {
+            $('.l_account').addClass("active");
+        } else {
+            $('.l_account').removeClass("active"); 
+        }
+    });
+
     // Select2
     $('.select2').select2({
         minimumResultsForSearch: -1,
