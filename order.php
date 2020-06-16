@@ -456,6 +456,14 @@
                             </div>
                         </div>
 
+                        <div class="l_ord">
+                            <input id="order" value="order" name="order" type="checkbox">
+                            <label class="l_ord__label" for="order">
+                                <span class="l_ord__check"></span>
+                                <span class="l_ord__text">Create account to track / modify order</span>
+                            </label>
+                        </div>
+
                         <div class="l_account">
                             <div class="l_step__name">Account:</div>
                             <div class="inputs">
@@ -471,13 +479,6 @@
                                 <input class="input" name="pass" placeholder="Create password *" type="password">
                                 <input class="input" name="pass2" placeholder="Repeat password *" type="password">
                             </div>
-                        </div>
-                        <div class="l_ord">
-                            <input id="order" value="order" name="order" type="checkbox">
-                            <label class="l_ord__label" for="order">
-                                <span class="l_ord__check"></span>
-                                <span class="l_ord__text">Create account to track / modify order</span>
-                            </label>
                         </div>
 
                         <div class="l_ord">
