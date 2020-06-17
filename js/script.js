@@ -14,16 +14,22 @@ $(document).ready(function () {
     $(".go_to_1").on("click", function() {
         $(".l_step, .l_step__ttle").removeClass("active");
         $(".l_step[data-id='1'], .l_step__ttle[data-id='1']").addClass("active");
+
+        scroll();
     });
 
     $(".go_to_2").on("click", function() {
         $(".l_step, .l_step__ttle").removeClass("active");
         $(".l_step[data-id='2'], .l_step__ttle[data-id='2']").addClass("active");
+
+        scroll();
     });
 
     $(".go_to_3").on("click", function() {
         $(".l_step, .l_step__ttle").removeClass("active");
         $(".l_step[data-id='3'], .l_step__ttle[data-id='3']").addClass("active");
+
+        scroll();
     });
 
     // Order slider
@@ -140,5 +146,34 @@ $(document).ready(function () {
         minimumResultsForSearch: -1,
         placeholder: $(this).data("placeholder")
     });
+
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
+    function scroll() {
+        if (isMobile.any()) {
+            $("body, html").animate({
+                scrollTop: $(".l_card__right").offset().top - $(".l_header").height()
+            }, 800);
+        }
+    }
 
 });
