@@ -236,14 +236,14 @@
                             <div class="l_color__el">
                                 <input id="h_color_1" value="h_color_1" name="h_color" type="radio" checked>
                                 <label class="l_color__label" for="h_color_1">
-                                    <span style="background: black;" class="l_color__check"></span>
+                                    <span style="background-image: url(img/gBlack.png);" class="l_color__check"></span>
                                     <span class="l_color__text">Stealthy Black</span>
                                 </label>
                             </div>
                             <div class="l_color__el">
                                 <input id="h_color_2" value="h_color_2" name="h_color" type="radio">
                                 <label class="l_color__label" for="h_color_2">
-                                    <span style="background-image: url(img/gBlack.png);" class="l_color__check"></span>
+                                    <span style="background: black;" class="l_color__check"></span>
                                     <span class="l_color__text">Gloss Black</span>
                                 </label>
                             </div>
