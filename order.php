@@ -243,7 +243,7 @@
                             <div class="l_color__el">
                                 <input id="h_color_2" value="h_color_2" name="h_color" type="radio">
                                 <label class="l_color__label" for="h_color_2">
-                                    <span style="background: #545454;" class="l_color__check"></span>
+                                    <span style="background-image: url(img/gBlack.png);" class="l_color__check"></span>
                                     <span class="l_color__text">Gloss Black</span>
                                 </label>
                             </div>
@@ -263,28 +263,28 @@
                             <div class="l_color__el">
                                 <input id="v_color_2" value="v_color_2" name="v_color" type="radio">
                                 <label class="l_color__label" for="v_color_2">
-                                    <span style="background: orange;" class="l_color__check"></span>
+                                    <span style="background: #838c91;" class="l_color__check"></span>
                                     <span class="l_color__text">Clear</span>
                                 </label>
                             </div>
                             <div class="l_color__el">
                                 <input id="v_color_3" value="v_color_3" name="v_color" type="radio">
                                 <label class="l_color__label" for="v_color_3">
-                                    <span style="background: blue;" class="l_color__check"></span>
+                                    <span style="background-image: url(img/irirdium.png);"class="l_color__check"></span>
                                     <span class="l_color__text">Iridium</span>
                                 </label>
                             </div>
                             <div class="l_color__el">
                                 <input id="v_color_4" value="v_color_4" name="v_color" type="radio">
                                 <label class="l_color__label" for="v_color_4">
-                                    <span style="background: red;" class="l_color__check"></span>
+                                    <span style="background: #eb3325;" class="l_color__check"></span>
                                     <span class="l_color__text">Red</span>
                                 </label>
                             </div>
                             <div class="l_color__el">
                                 <input id="v_color_5" value="v_color_5" name="v_color" type="radio">
                                 <label class="l_color__label" for="v_color_5">
-                                    <span style="background: green;" class="l_color__check"></span>
+                                    <span style="background-image: url(img/chrome.png);" class="l_color__check"></span>
                                     <span class="l_color__text">Chrome</span>
                                 </label>
                             </div>

@@ -663,17 +663,11 @@ body
             & + label
                     .l_color
                         &__check
-                            border: 1px solid #fff
-                            filter: grayscale(0)
+                            border: 2px solid #fff
                         &__text
                             color: #fff
-        &:not(:checked)
-            & + label
-                    .l_color
-                        &__check
-                            background: transparent !important
     &__el
-        margin: 0 40px 40px 0
+        margin: 0 75px 40px 0
     &__label
         display: flex
         flex-direction: column
@@ -683,11 +677,13 @@ body
         min-width: 28px
         width: 28px
         height: 28px
+        background-size: 210%
+        background-position: center
+        background-repeat: no-repeat
         border: 1px solid #818c92
         position: relative
-        filter: grayscale(100%)
         transform: rotate(45deg)
-        transition: background .3s ease-out, border .3s ease-out, filter .3s ease-out
+        transition: border .3s ease-out
     &__text
         font-size: 14px
         color: #818c92
