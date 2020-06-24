@@ -60,6 +60,22 @@ $(document).ready(function () {
         } else {
             $('.l_header').addClass('transparent');
         }
+
+        // To top
+        if ($(window).scrollTop() > 500) {
+            $('.right_navs').addClass('active');
+        } else {
+            $('.right_navs').removeClass('active');
+        }
+
+        animations();
+    });
+
+    // To top
+    $('.to_top').on("click", function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800);
     });
 
     // Langueage
@@ -174,6 +190,20 @@ $(document).ready(function () {
                 scrollTop: $(".l_card__right").offset().top - $(".l_header").height()
             }, 800);
         }
+    }
+
+    // Animations
+    function animations() {
+        $(".animation").each(function () {
+            var windowTop = $(window).height() * .9 + $(window).scrollTop(),
+                objectTop = $(this).offset().top;
+
+            if (windowTop > objectTop) {
+                $(this).addClass('animated');
+            } else {
+                $(this).removeClass('animated');
+            }
+        });
     }
 
 });

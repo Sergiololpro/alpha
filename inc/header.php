@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="js/libs/slick/slick.css">
   <link rel="stylesheet" href="js/libs/select2/select2.min.css">
-  <link rel="stylesheet" href="css/styles.css?v=7">
+  <link rel="stylesheet" href="css/styles.css?v=17">
   <title><?=$title?></title>
 </head>
 
