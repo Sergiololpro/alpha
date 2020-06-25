@@ -1900,6 +1900,120 @@ body
 .animation_top
     transform: translateY(-100px)
 
+.new_modal
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    overflow: hidden
+    overflow-y: auto
+    padding: 0 10%
+    &-mask
+        background: url(../img/new_modal-mask.png) 20% bottom no-repeat #191b1c
+        background-size: auto 90%
+    &-light
+        background: url(../img/new_modal-light.png) 20% bottom no-repeat #191b1c
+        background-size: auto 80%
+    &-air
+        background: url(../img/new_modal-air.png) 35% bottom no-repeat #191b1c
+        background-size: auto 80%
+    &-carbon
+        background: url(../img/new_modal-carbon.png) left top no-repeat #191b1c
+        background-size: 50% auto
+    &-spoiler
+        background: url(../img/new_modal-spoiler.png) left top no-repeat #191b1c
+        background-size: 60% auto
+    &-glasses
+        background: url(../img/new_modal-glasses.png) left top no-repeat #191b1c
+        background-size: 60% auto
+    &-blue
+        background: url(../img/new_modal-blue.png) left top no-repeat #191b1c
+        background-size: 80% auto
+    &-lens
+        background: url(../img/new_modal-lens.png) left top no-repeat #191b1c
+        background-size: 40% auto
+    &__helm
+        pointer-events: none
+        position: absolute
+        &-mask
+            width: 60%
+            left: -5%
+            top: 0
+            bottom: 0
+            margin: auto
+            &-mob,
+            &-small
+                display: none
+        &-light
+            width: 75%
+            left: 0
+            bottom: -19px
+            &-mob,
+            &-small
+                display: none
+        &-air
+            height: 100%
+            left: 0
+            top: 0
+            &-mob,
+            &-small
+                display: none
+        &-carbon
+            width: 45%
+            left: 0
+            bottom: 0
+            &-mob,
+            &-small
+                display: none
+        &-spoiler
+            width: 50%
+            left: 0
+            bottom: 0
+            &-mob,
+            &-small
+                display: none
+        &-glasses
+            width: 55%
+            left: 0
+            top: 0
+            bottom: 0
+            margin: auto
+            &-mob,
+            &-small
+                display: none
+        &-blue
+            width: 55%
+            left: 0
+            top: 0
+            bottom: 0
+            margin: auto
+            &-mob,
+            &-small
+                display: none
+        &-lens
+            width: 55%
+            left: 0
+            bottom: 0
+            &-mob,
+            &-small
+                display: none
+    &__content
+        width: 46%
+        z-index: 1
+        position: relative
+    &__title
+        font-size: 34px
+        color: #fff
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 2px
+        margin: 0 0 45px
+    &__text
+        font-size: 16px
+        color: #95a1a7
+        line-height: 150%
+        margin: 0 0 55px
+
+
 @media screen and (max-width: 1400px)
     .block_1
         &__helm
@@ -2307,6 +2421,74 @@ body
     .small
         font-size: 16px
         top: -10px
+
+    .new_modal
+        padding: 0 8%
+        &-mask
+            background: url(../img/new_modal-mask.png) 10% center no-repeat #191b1c
+            background-size: auto 70%
+        &-light
+            background: url(../img/new_modal-light.png) 20% top no-repeat #191b1c
+            background-size: auto 40%
+        &-air
+            background: url(../img/new_modal-air.png) left center no-repeat #191b1c
+            background-size: auto 90%
+        &-carbon
+            background: url(../img/new_modal-carbon.png) left bottom no-repeat #191b1c
+            background-size: 35% auto
+        &-spoiler
+            background: url(../img/new_modal-spoiler.png) left top no-repeat #191b1c
+            background-size: 100% auto
+        &-glasses
+            background: url(../img/new_modal-glasses.png) left top no-repeat #191b1c
+            background-size: 100% auto
+        &-blue
+            background: url(../img/new_modal-blue.png) left top no-repeat #191b1c
+            background-size: 100% auto
+        &.new_modal-lens
+            background: url(../img/new_modal-lens.png) left top no-repeat #191b1c
+            background-size: 60% auto
+        &__helm
+            &-mask
+                width: 65%
+                left: -20%
+            &-light
+                display: none
+                &-mob
+                    display: block
+                    width: 60%
+                    bottom: 0
+            &-air
+                display: none
+                &-mob
+                    display: block
+            &-carbon
+                display: none
+                &-mob
+                    display: block
+                    width: 35%
+                    top: 0
+            &-spoiler
+                display: none
+                &-mob
+                    display: block
+                    width: 35%
+            &-glasses
+                left: -10%
+            &-blue
+                width: 60%
+                left: -15%
+            &-lens
+                display: none
+                &-mob
+                    display: block
+                    width: 45%
+                    top: 0
+                    margin: auto
+        &__content
+            width: 55%
+        &__title
+            font-size: 30px
 
 @media screen and (max-width: 640px)
     .l_card
@@ -3085,6 +3267,111 @@ body
         font-size: 12px
         top: -6px
 
+    .new_modal
+        align-items: flex-start
+        &-mask
+            background: url(../img/new_modal-mask.png) right 20% top -30% no-repeat #191b1c
+            background-size: 60% auto
+            padding: 300px 8% 30px
+        &-light
+            background: url(../img/new_modal-light.png) center top no-repeat #191b1c
+            background-size: auto 40%
+            padding: 75px 8% 225px
+        &-air
+            background: url(../img/new_modal-air.png) left top no-repeat #191b1c
+            background-size: 60% auto
+            padding: 340px 8% 30px
+        &-carbon
+            background: url(../img/new_modal-carbon.png) left bottom 130px no-repeat #191b1c
+            background-size: 80% auto
+            padding: 75px 8% 250px
+        &-spoiler
+            background: url(../img/new_modal-spoiler.png) left top no-repeat #191b1c
+            background-size: 210% auto
+            padding: 75px 8% 250px
+        &-glasses
+            background: url(../img/new_modal-glasses.png) left top no-repeat #191b1c
+            background-size: 220% auto
+            padding: 260px 8% 30px
+        &-blue
+            background: url(../img/new_modal-blue.png) left top no-repeat #191b1c
+            background-size: 260% auto
+            padding: 260px 8% 30px
+        &-lens
+            background: url(../img/new_modal-lens.png) left top no-repeat #191b1c
+            background-size: 125% auto
+            padding: 75px 8% 250px
+        &__content
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+        &__title
+            font-size: 16px
+            margin: 0 0 30px
+        &__text
+            font-size: 14px
+            margin: 0 0 45px
+        &__helm
+            &-mask
+                width: auto
+                max-width: 100%
+                height: auto
+                top: -50px
+                bottom: initial
+                left: 0
+            &-light
+                display: none
+                &-small
+                    display: block
+                    width: 100%
+                    bottom: 0
+            &-air
+                display: none
+                &-small
+                    display: block
+                    width: 100%
+                    height: auto
+            &-carbon
+                display: block
+                width: 95%
+                &-mob
+                    display: none
+            &-spoiler
+                display: block
+                width: 95%
+                bottom: -70px
+                &-mob
+                    display: none
+            &-glasses
+                display: none
+                &-small
+                    display: block
+                    width: auto
+                    max-width: 100%
+                    height: auto
+                    left: 0
+                    right: 0
+                    top: 0
+                    bottom: initial
+            &-blue
+                width: auto
+                height: 240px
+                left: 0
+                right: 0
+                top: 0
+                bottom: initial
+            &-lens
+                display: none
+                &-small
+                    display: block
+                    width: 100%
+        .l_button
+            width: 213px
+            max-width: 100%
+            height: 55px
+
 @media screen and (max-width: 375px)
     .wrapper-block_1
         padding-top: 430px
@@ -3117,6 +3404,23 @@ body
     .block_12
         &__mob
             top: -170px
+
+    .new_modal
+        &-mask
+            padding: 260px 8% 30px
+
+    .new_modal
+        &-light,
+        &-carbon,
+        &-spoiler,
+        &-lens
+            padding: 75px 8% 30px
+        &__helm
+            &-light,
+            &-carbon,
+            &-spoiler,
+            &-lens
+                display: none
 
 @media screen and (max-width: 320px)
     .wrapper-block_1

@@ -1,4 +1,4 @@
-<?php $title = "Оформление заказа"; ?>
+<?php $title = "Pop ups"; ?>
 
 <?php include 'inc/header.php'; ?>
 

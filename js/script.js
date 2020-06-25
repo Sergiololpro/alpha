@@ -139,6 +139,39 @@ $(document).ready(function () {
         $('.overlay, .modal_lorem').addClass("active");
     });
 
+    $(".o_mask").on("click", function() {
+        $('.overlay, .new_modal-mask').addClass("active");
+    });
+
+    $(".o_light").on("click", function() {
+        $('.overlay, .new_modal-light').addClass("active");
+    });
+
+    $(".o_air").on("click", function() {
+        $('.overlay, .new_modal-air').addClass("active");
+    });
+
+    $(".o_carbon").on("click", function() {
+        $('.overlay, .new_modal-carbon').addClass("active");
+    });
+    
+    $(".o_spoiler").on("click", function() {
+        $('.overlay, .new_modal-spoiler').addClass("active");
+    });
+
+    $(".o_glasses").on("click", function() {
+        $('.overlay, .new_modal-glasses').addClass("active");
+    });
+    
+    $(".o_blue").on("click", function() {
+        $('.overlay, .new_modal-blue').addClass("active");
+    });
+
+    $(".o_lens").on("click", function() {
+        $('.overlay, .new_modal-lens').addClass("active");
+    });
+    
+
     // Shipping address
     $("#same").on("click", function() {
         if ($('#same').is(':checked')) {
