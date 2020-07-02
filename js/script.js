@@ -109,7 +109,7 @@ $(document).ready(function () {
         $('.overlay, .modal').removeClass("active");
     });
 
-    $(".modal__close").on("click", function() {
+    $(".modal__close, .modal .l_button").on("click", function() {
         $('.overlay').removeClass("active");
         $(this).closest(".modal").removeClass("active");
     });
@@ -170,7 +170,14 @@ $(document).ready(function () {
     $(".o_lens").on("click", function() {
         $('.overlay, .new_modal-lens').addClass("active");
     });
-    
+
+    $(".o_when").on("click", function() {
+        $('.overlay, .new_modal-when').addClass("active");
+    });
+
+    $(".o_size").on("click", function() {
+        $('.overlay, .new_modal-size').addClass("active");
+    }); 
 
     // Shipping address
     $("#same").on("click", function() {
