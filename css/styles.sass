@@ -1931,6 +1931,20 @@ body
     &-lens
         background: url(../img/new_modal-lens.png) left top no-repeat #191b1c
         background-size: 40% auto
+    &-when
+        height: 700px
+        background: url(../img/new_modal-when.png) center bottom no-repeat #191b1c
+        background-size: 100% auto
+        padding: 60px 10%
+    &-size
+        height: 740px
+        background: url(../img/new_modal-size.png) left top no-repeat #191b1c
+        background-size: 85% auto
+        padding: 60px 10%
+        .new_modal
+            &__wp
+                .l_button
+                    margin: 0
     &__helm
         pointer-events: none
         position: absolute
@@ -2012,7 +2026,120 @@ body
         color: #95a1a7
         line-height: 150%
         margin: 0 0 55px
+    &__wp
+        max-width: 900px
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: 0 auto
+        .new_modal
+            &__title
+                font-size: 30px
+                text-align: center
+                z-index: 1
+                position: relative
+                margin: 0 0 30px
+        .l_button
+            margin: 0 0 24px
+    &__row
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+        margin: 0 0 50px
+    &__block
+        width: 42%
+        position: relative
+        &:before
+            content: ""
+            width: 90px
+            height: 140px
+            background: url(../img/new_modal__block-1.png) center no-repeat
+            background-size: contain
+            pointer-events: none
+            position: absolute
+            left: -20%
+            top: -24%
+        &:last-child
+            &:before
+                width: 110px
+                height: 140px
+                background: url(../img/new_modal__block-2.png) center no-repeat
+                background-size: contain
+                left: -10%
+        *   
+            z-index: 1
+            position: relative
+    &__white
+        font-size: 20px
+        color: #fff
+        font-weight: 600
+        line-height: 140%
+        margin: 0 0 24px
+    &__grey
+        font-size: 14px
+        color: #91a2a9
+        line-height: 140%
+        margin: 0 0 24px
+    &__red
+        font-size: 14px
+        color: #ff0110
+        line-height: 140%
+        margin: 0 0 24px
+    &__center
+        width: 50px
+        display: flex
+        flex-direction: column
+        align-items: center
+        z-index: 1
+        position: relative
+    &__arrow
+        width: 30px
+        margin: 0 0 14px
+    &__txt
+        font-size: 12px
+        color: #fff
+        font-weight: 700
+        text-align: center
+        text-transform: uppercase
+    &__under
+        font-size: 18px
+        color: #91a2a9
+        text-align: center
+    &__gr
+        font-size: 16px
+        color: #91a2a9
+        line-height: 140%
+        margin: 0 0 24px
 
+.m_size
+    width: 100%
+    max-width: 770px
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    margin: 0 0 30px
+    &__img
+        width: 35%
+    &__right
+        width: 50%
+    &__table
+        width: 100%
+        text-align: left
+        margin: 20px 0 0
+        th
+            font-size: 16px
+            color: #fff
+            text-transform: uppercase
+            padding: 0 0 15px
+        td
+            font-size: 16px
+            font-weight: 300
+            padding: 0 0 15px
+        tr
+            &:last-child
+                td
+                    padding: 0
 
 @media screen and (max-width: 1400px)
     .block_1
@@ -2445,6 +2572,10 @@ body
         &-blue
             background: url(../img/new_modal-blue.png) left top no-repeat #191b1c
             background-size: 100% auto
+        &-when
+            padding: 50px 8%
+        &-size
+            padding: 50px 8%
         &.new_modal-lens
             background: url(../img/new_modal-lens.png) left top no-repeat #191b1c
             background-size: 60% auto
@@ -2489,6 +2620,8 @@ body
             width: 55%
         &__title
             font-size: 30px
+        &__row
+            margin: 0 0 20px
 
 @media screen and (max-width: 640px)
     .l_card
@@ -3341,7 +3474,7 @@ body
             &-spoiler
                 display: block
                 width: 95%
-                bottom: -70px
+                bottom: -100px
                 &-mob
                     display: none
             &-glasses
@@ -3367,10 +3500,41 @@ body
                 &-small
                     display: block
                     width: 100%
+        &__wp
+            .new_modal
+                &__title
+                    font-size: 16px
+        &__block
+            width: 100%
+        &__white
+            font-size: 14px
+            margin: 0 0 14px
+        &__red,
+        &__grey
+            font-size: 12px
+            margin: 0 0 14px
+        &__center
+            width: 100%
+            flex-direction: row-reverse
+            justify-content: center
+            margin: 6px 0 20px
+        &__arrow
+            margin: 0 0 0 20px
+            transform: rotate(90deg)
+        &__txt
+            margin: 0
+        &__under
+            font-size: 16px
         .l_button
             width: 213px
             max-width: 100%
             height: 55px
+
+    .m_size
+        &__img
+            width: 0
+        &__right
+            width: 100%
 
 @media screen and (max-width: 375px)
     .wrapper-block_1
@@ -3414,6 +3578,7 @@ body
         &-carbon,
         &-spoiler,
         &-lens
+            align-items: center
             padding: 75px 8% 30px
         &__helm
             &-light,
