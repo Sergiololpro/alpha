@@ -183,6 +183,10 @@ $(document).ready(function () {
         $('.overlay, .new_modal-terms').addClass("active");
     });
 
+    $(".o_privacy").on("click", function() {
+        $('.overlay, .new_modal-privacy').addClass("active");
+    });
+
     // Shipping address
     $("#same").on("click", function() {
         if ($('#same').is(':checked')) {
