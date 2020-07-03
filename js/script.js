@@ -177,7 +177,11 @@ $(document).ready(function () {
 
     $(".o_size").on("click", function() {
         $('.overlay, .new_modal-size').addClass("active");
-    }); 
+    });
+    
+    $(".o_terms").on("click", function() {
+        $('.overlay, .new_modal-terms').addClass("active");
+    });
 
     // Shipping address
     $("#same").on("click", function() {
